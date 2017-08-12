@@ -27,3 +27,36 @@ a {
   flex-direction: column;
   margin-bottom: 12px;
 }
+
+#map {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.map-button {
+  width: 70%;
+  padding: 10px 16px;
+  margin-bottom: 8px;
+}
+
+.button-wrapper {
+  position: relative;
+  z-index: 1;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 24px;
+  padding: 0 12px;
+}
+
+#main-title {
+  font-family: 'Indie Flower', cursive;
+  position: fixed;
+  z-index: 1;
+  top: 16px;
+  right: 16px;
+  font-size: 1.8em;
+}

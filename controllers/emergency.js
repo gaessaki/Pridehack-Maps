@@ -7,17 +7,11 @@ const config = {
 
 exports.text = function(req, res, next) {
     // make Twilio text message
-    client.status(
-        {
-            to: '+15142106816',
-            from: '+15142106816',
-            body: 'This is an alert message'
-        },
-        (err, message) => {
+    console.log('test');
+    res.send(200);
+}
 
-            console.log(message.sid);
-
-        }
-    );
+exports.status = function(req, res, next) {
+    
 }
 
