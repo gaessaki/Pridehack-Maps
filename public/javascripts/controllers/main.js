@@ -12,7 +12,6 @@ angular.module('pridehacks-maps')
     }
 });
 
-// alert("test!!!");
 $(document).ready(function () {
     var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 15,
