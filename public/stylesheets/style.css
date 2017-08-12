@@ -1,5 +1,4 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -59,4 +58,7 @@ a {
   top: 16px;
   right: 16px;
   font-size: 1.8em;
+}
+
+#form-iframe {
 }
