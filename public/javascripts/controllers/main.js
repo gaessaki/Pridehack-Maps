@@ -20,16 +20,22 @@ $(document).ready(function () {
       // mapTypeId: google.maps.MapTypeId.ROADMAP
     });
 
+    var locations = [
+        [45.467809, -73.628636, 1502566344000, 'John'],
+        [45.467819, -73.618646, 1502561341000, 'Marie'],
+    ];
+
     var infowindow = new google.maps.InfoWindow();
     var marker, i;
     for (i = 0; i < locations.length; i++) {
       marker = new google.maps.Marker({
-        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        position: new google.maps.LatLng(locations[i][0], locations[i][1]),
         map: map
       });
       google.maps.event.addListener(marker, 'click', (function(marker, i) {
         return function() {
-          infowindow.setContent(locations[i][0]);
+          var t = new Date(locations[i][2]);
+          infowindow.setContent(locations[i][3] + ': ' + t.toGMTString());
           infowindow.open(map, marker);
         }
       })(marker, i));
