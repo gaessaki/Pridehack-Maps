@@ -13,5 +13,10 @@ angular.module('pridehacks-maps', ['ui.router', 'ngResource'])
             url: '/form',
             templateUrl: '/views/form.html',
             controller: 'formController'
+        })
+        .state('update', {
+            url: '/update',
+            templateUrl: '/views/update.html',
+            controller: 'updateController'
         });
 });

@@ -1,19 +1,18 @@
 'use strict'
 
 angular.module('pridehacks-maps')
-    .factory('EmergencyService', function EmergencyService(Emergency) {
+    .factory('CheckService', function CheckService(Check) {
+    
     return {
-        sendText: function (callback) {
+        in: function (data, callback) {
             var cb = callback || angular.noop;
             Emergency.post({
-                time: new Date(),
-                message: 'Test message',
+                data: data
             },
             function (err) {
                 console.log(err.data);
                 return cb(err.data);
-            });
-            window.location.href = 'tel:+15142338930';
+            })
         }
     }
 })
