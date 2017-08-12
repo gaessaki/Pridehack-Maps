@@ -6,7 +6,7 @@ angular.module('pridehacks-maps')
     return {
         in: function (data, callback) {
             var cb = callback || angular.noop;
-            Emergency.post({
+            Check.save({
                 data: data
             },
             function (err) {
