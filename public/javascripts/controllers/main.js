@@ -13,7 +13,9 @@ angular.module('pridehacks-maps')
 });
 
 $(document).ready(function () {
+  setTimeout(function(){
     loadMap();
+  }, 3000);
 })
 
 function loadMap() {
