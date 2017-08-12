@@ -9,8 +9,6 @@ angular.module('pridehacks-maps')
 
     $scope.emergency = function() {
         EmergencyService.sendText();
-<<<<<<< HEAD
-=======
     }
 });
 
@@ -25,7 +23,7 @@ $(document).ready(function () {
 
     var infowindow = new google.maps.InfoWindow();
     var marker, i;
-    for (i = 0; i < locations.length; i++) {  
+    for (i = 0; i < locations.length; i++) {
       marker = new google.maps.Marker({
         position: new google.maps.LatLng(locations[i][1], locations[i][2]),
         map: map
@@ -36,6 +34,5 @@ $(document).ready(function () {
           infowindow.open(map, marker);
         }
       })(marker, i));
->>>>>>> d71ceabbce7c4150b2fd8271438744e4975436cf
     }
 })
