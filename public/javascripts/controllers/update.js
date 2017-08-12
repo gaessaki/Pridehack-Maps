@@ -3,7 +3,7 @@ angular.module('pridehacks-maps')
     $scope.locData = {};
 
     $scope.update = function () {
-        
+        $location.path('/');
     }
 
     $scope.emergency = function() {
