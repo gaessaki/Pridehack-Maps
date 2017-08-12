@@ -7,7 +7,7 @@ const config = {
 
 exports.text = function(req, res, next) {
     // make Twilio text message
-    client.messages.create(
+    client.status(
         {
             to: '+15142106816',
             from: '+15142106816',
@@ -20,3 +20,4 @@ exports.text = function(req, res, next) {
         }
     );
 }
+
