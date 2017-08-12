@@ -13,6 +13,10 @@ angular.module('pridehacks-maps')
 });
 
 $(document).ready(function () {
+    loadMap();
+})
+
+function loadMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 15,
       center: new google.maps.LatLng(45.467809, -73.628636)
@@ -27,10 +31,15 @@ $(document).ready(function () {
 
     var infowindow = new google.maps.InfoWindow();
     var marker, i;
-    for (i = 0; i < locations.length; i++) {  
+    for (i = 0; i < locations.length; i++) {
+      var color = 'http://maps.google.com/mapfiles/ms/icons/red-dot.png';
+      if (locations[i][3] == 'Marie') {
+        color = 'http://maps.google.com/mapfiles/ms/icons/green-dot.png';
+      }
       marker = new google.maps.Marker({
         position: new google.maps.LatLng(locations[i][0], locations[i][1]),
-        map: map
+        map: map,
+        icon: color
       });
       google.maps.event.addListener(marker, 'click', (function(marker, i) {
         return function() {
@@ -40,4 +49,4 @@ $(document).ready(function () {
         }
       })(marker, i));
     }
-})
+}
