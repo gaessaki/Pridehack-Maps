@@ -1,4 +1,4 @@
 angular.module('pridehacks-maps')
-.controller('mainController', function ($scope) {
+.controller('formController', function ($scope) {
     $scope.locData = {};
 })
